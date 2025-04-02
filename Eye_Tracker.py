@@ -1,3 +1,5 @@
+#pip install opencv-python numpy mediapipe pyautogui scikit-learn
+
 import cv2
 import numpy as np
 import mediapipe as mp
