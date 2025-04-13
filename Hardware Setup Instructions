@@ -1,0 +1,4 @@
+Turn on hardware
+check bluetooth if it says paired then remove device and fiddle with it until it works because this tech is 20 years old and nobody uses this anymore
+if not open mindwave tutorial and it should ask which port it is connected to (AUTO will not work in most cases)
+Find the part in the code where it asks for COM port and put the correct one in because nothing is easy
