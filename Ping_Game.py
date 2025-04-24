@@ -18,18 +18,24 @@ MENU_FONT = pygame.font.Font(None, 60)
 # Difficulty settings
 DIFFICULTIES = {
     "Easy": {
-        "ball_speed": [4, 4],
-        "paddle_speed": 6,
-        "bot_accuracy": 0.4
+        "ball_speed": [3, 3],
+        "paddle_speed": 1.5,
+        "bot_accuracy": 1.0
     },
     "Medium": {
-        "ball_speed": [6, 6],
-        "paddle_speed": 10,
-        "bot_accuracy": 0.7
+        "ball_speed": [3, 3],
+        "paddle_speed": 2,
+        "bot_accuracy": 1.0
     },
-    "Hard": {
-        "ball_speed": [8, 8],
-        "paddle_speed": 14,
+    "Hard":{
+        "ball_speed": [3, 3],
+        "paddle_speed": 2.5,
+        "bot_accuracy": 1.0
+
+    },
+    "IMPOSSIBLE": {
+        "ball_speed": [3, 3],
+        "paddle_speed": 3,
         "bot_accuracy": 1.0
     }
 }
@@ -76,7 +82,7 @@ def run_game(difficulty):
     bot_accuracy = settings["bot_accuracy"]
 
     # Paddle positions
-    left_paddle = pygame.Rect(20, HEIGHT // 2 - PADDLE_HEIGHT // 2, PADDLE_WIDTH, PADDLE_HEIGHT)
+    left_paddle = pygame.Rect(20, HEIGHT // 2 - 75, PADDLE_WIDTH, 150)
     right_paddle = pygame.Rect(WIDTH - 30, HEIGHT // 2 - PADDLE_HEIGHT // 2, PADDLE_WIDTH, PADDLE_HEIGHT)
     ball = pygame.Rect(WIDTH // 2, HEIGHT // 2, BALL_RADIUS, BALL_RADIUS)
 
@@ -93,7 +99,7 @@ def run_game(difficulty):
             if event.type == pygame.QUIT:
                 running = False
 
-        # Human paddle
+        # Human paddle Use Mindwave'''
         keys = pygame.key.get_pressed()
         if keys[pygame.K_w] and left_paddle.top > 0:
             left_paddle.y -= PADDLE_SPEED
