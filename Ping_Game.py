@@ -102,9 +102,9 @@ def run_game(difficulty):
         # Human paddle Use Mindwave'''
         keys = pygame.key.get_pressed()
         if keys[pygame.K_w] and left_paddle.top > 0:
-            left_paddle.y -= PADDLE_SPEED
+            left_paddle.y -= 6
         if keys[pygame.K_s] and left_paddle.bottom < HEIGHT:
-            left_paddle.y += PADDLE_SPEED
+            left_paddle.y += 6
 
         # Bot paddle
         target_y = ball.centery
